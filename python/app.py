@@ -117,17 +117,18 @@ def main():
     if order_tracking_code:
         if is_cod(order_tracking_code):
             if(consult_method):
-                obj = track(order_tracking_code).json
-
-                # Testing ["turn on" any sample]
-                # obj = json.load(open('test/sample_object_delivered.json'))
-                obj = json.load(open('test/sample_object_delivery_on_going.json'))
-                # obj = json.load(open('test/sample_object_delivery_sent.json'))
-
                 # eval(consult_track_mode(consult_method))
                 
                 validator=0
                 while(validator!=1):
+
+                    obj = track(order_tracking_code).json
+
+                    # Testing ["turn on" any sample]
+                    # obj = json.load(open('test/sample_object_delivered.json'))
+                    # obj = json.load(open('test/sample_object_delivery_on_going.json'))
+                    # obj = json.load(open('test/sample_object_sent.json'))
+
                     print(f'Horário da Consulta: {str(datetime.datetime.now())[:19]}')
                     response=check_order_coming(obj)
                     if response == 1:  
@@ -143,9 +144,9 @@ def main():
                         validator = response
                     else:
                         show_last_status(obj)
-                        message=f'Nada ainda :(\nHorário da Consulta: {str(datetime.datetime.now())[:19]}\n{get_last_status(obj)}\n'
+                        message=f'Nada ainda! :( O objeto {order_tracking_code} ainda não saiu para entrega\nHorário da Consulta: {str(datetime.datetime.now())[:19]}\n{get_last_status(obj)}\n'
                         twitter_bot.send_direct(twitter_settings['target_username'],message)
-                        time.sleep(600)
+                        time.sleep(15)
                         
         else:
             print('Código de rastreio inválido. Favor tentar novamente')    
