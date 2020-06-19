@@ -1,0 +1,237 @@
+{
+    "versao": "3.0",
+    "quantidade": "1",
+    "pesquisa": "Lista de Objetos",
+    "resultado": "Todos os eventos",
+    "objeto": [
+      {
+        "numero": "OJ693674304BR",
+        "sigla": "OJ",
+        "nome": "ETIQUETA LOGICA SEDEX OJ",
+        "categoria": "SEDEX",
+        "evento": [
+          {
+            "tipo": "OEC",
+            "status": "01",
+            "data": "19/06/2020",
+            "hora": "10:40",
+            "criacao": "19062020104026",
+            "descricao": "Objeto saiu para entrega ao destinatário",
+            "unidade": {
+              "local": "CEE JUNDIAI",
+              "codigo": "13211970",
+              "cidade": "JUNDIAI",
+              "uf": "SP",
+              "sto": "00055863",
+              "tipounidade": "Unidade de Distribuição",
+              "endereco": {
+                "codigo": "93881",
+                "cep": "13211970",
+                "logradouro": "RUA NORIVALDO MARTINS DA SILVA",
+                "numero": "200",
+                "localidade": "JUNDIAI",
+                "uf": "SP",
+                "bairro": "RETIRO",
+                "latitude": "-23",
+                "longitude": "-46"
+              }
+            },
+            "cepDestino": "13203000",
+            "prazoGuarda": "0",
+            "diasUteis": "0",
+            "dataPostagem": "15/06/2020",
+            "detalheOEC": {
+              "carteiro": "81097999",
+              "distrito": "407",
+              "lista": "102100126977",
+              "unidade": "13211970",
+              "latitude": "-23.205015000000003",
+              "longitude": "-46.86548833333333"
+            }
+          },
+          {
+            "tipo": "DO",
+            "status": "01",
+            "data": "16/06/2020",
+            "hora": "00:30",
+            "criacao": "16062020003034",
+            "descricao": "Objeto encaminhado ",
+            "unidade": {
+              "local": "CTCE INDAIATUBA",
+              "codigo": "13337981",
+              "cidade": "INDAIATUBA",
+              "uf": "SP",
+              "sto": "00431115",
+              "tipounidade": "Unidade de Tratamento",
+              "endereco": {
+                "codigo": "484979",
+                "cep": "13337981",
+                "logradouro": "RODOVIA ENGENHEIRO ERMENIO DE OLIVEIRA PENTEADO",
+                "numero": "KM 62,25",
+                "localidade": "INDAIATUBA",
+                "uf": "SP",
+                "bairro": "HELVETIA"
+              }
+            },
+            "destino": [
+              {
+                "local": "CEE JUNDIAI",
+                "codigo": "13211970",
+                "cidade": "JUNDIAI",
+                "bairro": "RETIRO",
+                "uf": "SP",
+                "endereco": {
+                  "codigo": "93881",
+                  "cep": "13211970",
+                  "logradouro": "RUA NORIVALDO MARTINS DA SILVA",
+                  "numero": "200",
+                  "localidade": "JUNDIAI",
+                  "uf": "SP",
+                  "bairro": "RETIRO",
+                  "latitude": "-23",
+                  "longitude": "-46"
+                }
+              }
+            ],
+            "cepDestino": "13203000",
+            "prazoGuarda": "0",
+            "diasUteis": "0",
+            "dataPostagem": "15/06/2020"
+          },
+          {
+            "tipo": "DO",
+            "status": "01",
+            "data": "15/06/2020",
+            "hora": "15:31",
+            "criacao": "15062020153134",
+            "descricao": "Objeto encaminhado ",
+            "unidade": {
+              "local": "CTE JAGUARE",
+              "codigo": "05314979",
+              "cidade": "SAO PAULO",
+              "uf": "SP",
+              "sto": "00025587",
+              "tipounidade": "Unidade de Tratamento",
+              "endereco": {
+                "codigo": "35470",
+                "cep": "05314971",
+                "logradouro": "RUA MERGENTHALER",
+                "complemento": "BLOCO III SUBSOLO II",
+                "numero": "568",
+                "localidade": "SAO PAULO",
+                "uf": "SP",
+                "bairro": "VILA LEOPOLDINA",
+                "latitude": "-23.5294733",
+                "longitude": "-46.7386676"
+              }
+            },
+            "destino": [
+              {
+                "local": "CTCE INDAIATUBA",
+                "codigo": "13337981",
+                "cidade": "INDAIATUBA",
+                "bairro": "HELVETIA",
+                "uf": "SP",
+                "endereco": {
+                  "codigo": "484979",
+                  "cep": "13337981",
+                  "logradouro": "RODOVIA ENGENHEIRO ERMENIO DE OLIVEIRA PENTEADO",
+                  "numero": "KM 62,25",
+                  "localidade": "INDAIATUBA",
+                  "uf": "SP",
+                  "bairro": "HELVETIA"
+                }
+              }
+            ],
+            "cepDestino": "13203000",
+            "prazoGuarda": "0",
+            "diasUteis": "0",
+            "dataPostagem": "15/06/2020"
+          },
+          {
+            "tipo": "RO",
+            "status": "01",
+            "data": "15/06/2020",
+            "hora": "13:11",
+            "criacao": "15062020131146",
+            "descricao": "Objeto encaminhado ",
+            "unidade": {
+              "local": "AGF XV DE NOVEMBRO",
+              "codigo": "06850974",
+              "cidade": "ITAPECERICA DA SERRA",
+              "uf": "SP",
+              "sto": "00423128",
+              "tipounidade": "Agência dos Correios",
+              "endereco": {
+                "codigo": "328892",
+                "cep": "06850972",
+                "logradouro": "AVENIDA QUINZE DE NOVEMBRO",
+                "numero": "1668",
+                "localidade": "ITAPECERICA DA SERRA",
+                "uf": "SP",
+                "bairro": "CENTRO",
+                "latitude": "-23.70222",
+                "longitude": "-46.8508225"
+              }
+            },
+            "destino": [
+              {
+                "local": "CTE JAGUARE",
+                "codigo": "05314979",
+                "cidade": "SAO PAULO",
+                "bairro": "VILA LEOPOLDINA",
+                "uf": "SP",
+                "endereco": {
+                  "codigo": "35470",
+                  "cep": "05314971",
+                  "logradouro": "RUA MERGENTHALER",
+                  "complemento": "BLOCO III SUBSOLO II",
+                  "numero": "568",
+                  "localidade": "SAO PAULO",
+                  "uf": "SP",
+                  "bairro": "VILA LEOPOLDINA",
+                  "latitude": "-23.5294733",
+                  "longitude": "-46.7386676"
+                }
+              }
+            ],
+            "cepDestino": "13203000",
+            "prazoGuarda": "0",
+            "diasUteis": "0",
+            "dataPostagem": "15/06/2020"
+          },
+          {
+            "tipo": "PO",
+            "status": "01",
+            "data": "15/06/2020",
+            "hora": "13:06",
+            "criacao": "15062020130640",
+            "descricao": "Objeto postado",
+            "unidade": {
+              "local": "AGF XV DE NOVEMBRO",
+              "codigo": "06850974",
+              "cidade": "ITAPECERICA DA SERRA",
+              "uf": "SP",
+              "sto": "00423128",
+              "tipounidade": "Agência dos Correios",
+              "endereco": {
+                "codigo": "328892",
+                "cep": "06850972",
+                "logradouro": "AVENIDA QUINZE DE NOVEMBRO",
+                "numero": "1668",
+                "localidade": "ITAPECERICA DA SERRA",
+                "uf": "SP",
+                "bairro": "CENTRO",
+                "latitude": "-23.70222",
+                "longitude": "-46.8508225"
+              }
+            },
+            "cepDestino": "13203000",
+            "prazoGuarda": "0",
+            "diasUteis": "0",
+            "dataPostagem": "15/06/2020"
+          }
+        ]
+      }
+    ]
+  }

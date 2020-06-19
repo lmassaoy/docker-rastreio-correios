@@ -7,6 +7,7 @@
 ### Tech stack planned for this project
     - Python 3.X
     - Twitter API
+    - Correios Webservice
     - Docker
     - Kubernetes
 ### OK... but what do I do?
@@ -14,8 +15,7 @@
   - Monitor a specific order and alert sending Direct Messages on Twitter when:
     - a new status update appears;
     - when the order is on its way its owner
-
-### How use me
+### How to use me
 
 Example:
 ```sh
