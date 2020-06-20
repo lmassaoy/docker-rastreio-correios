@@ -27,5 +27,6 @@ $ python3 app.py -c OJ693674304BR -f trackOrder_v2
 
 Let's check the console!
 [![Screen-Shot-2020-06-20-at-03-32-56.png](https://i.postimg.cc/FRYtXSG3/Screen-Shot-2020-06-20-at-03-32-56.png)](https://postimg.cc/FdXCj7MH)
+
 and what happend on Twitter?
 [![Screen-Shot-2020-06-20-at-03-26-28.png](https://i.postimg.cc/nhbPS564/Screen-Shot-2020-06-20-at-03-26-28.png)](https://postimg.cc/nC22CdVr)
