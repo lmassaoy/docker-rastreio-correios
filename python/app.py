@@ -1,7 +1,8 @@
 import datetime
 import time
 import argparse
-import json
+# import json
+import os
 from external_communication.twitter_agent import TwitterBot
 from external_communication.correios import Objeto, track, is_cod
  
@@ -109,9 +110,11 @@ def show_order_history(order_tracking_code):
 
 
 def order_tracking(order_tracking_code):
-    twitter_settings = json.load(open('settings/twitter_settings.json'))
-    twitter_bot = TwitterBot(twitter_settings['api']['token'],twitter_settings['api']['token_secret'],
-        twitter_settings['api']['consumer_key'],twitter_settings['api']['consumer_secret'])
+    # twitter_settings = json.load(open('settings/twitter_settings.json'))
+    # twitter_bot = TwitterBot(twitter_settings['api']['token'],twitter_settings['api']['token_secret'],
+        # twitter_settings['api']['consumer_key'],twitter_settings['api']['consumer_secret'])
+    twitter_bot = TwitterBot(os.environ['TWITTER_API_TOKEN'],os.environ['TWITTER_API_TOKEN_SECRET'],
+        os.environ['TWITTER_API_CONSUMER_KEY'],os.environ['TWITTER_API_CONSUMER_SECRET'])
     validator=0
     consult_counter=0
 
@@ -137,7 +140,7 @@ def order_tracking(order_tracking_code):
             
             # Print in console
             show_last_status(order_tracking_code)
-            twitter_bot.send_direct(twitter_settings['target_username'],message)
+            twitter_bot.send_direct(os.environ['TWITTER_DM_TARGET_USER'],message)
             validator = response
         else:
             consult_counter+=1
@@ -145,7 +148,7 @@ def order_tracking(order_tracking_code):
             if consult_counter == 1:
                 show_last_status(order_tracking_code)
                 message=f'Nada ainda! :( O objeto {order_tracking_code} ainda não saiu para entrega\nHorário da Consulta: {str(datetime.datetime.now())[:19]}\n{get_last_status(obj)}\n'
-                twitter_bot.send_direct(twitter_settings['target_username'],message)
+                twitter_bot.send_direct(os.environ['TWITTER_DM_TARGET_USER'],message)
                 print(counter_message)
             else:
                 print(counter_message)
@@ -153,9 +156,11 @@ def order_tracking(order_tracking_code):
 
 
 def order_tracking_v2(order_tracking_code):
-    twitter_settings = json.load(open('settings/twitter_settings.json'))
-    twitter_bot = TwitterBot(twitter_settings['api']['token'],twitter_settings['api']['token_secret'],
-        twitter_settings['api']['consumer_key'],twitter_settings['api']['consumer_secret'])
+    # twitter_settings = json.load(open('settings/twitter_settings.json'))
+    # twitter_bot = TwitterBot(twitter_settings['api']['token'],twitter_settings['api']['token_secret'],
+        # twitter_settings['api']['consumer_key'],twitter_settings['api']['consumer_secret'])
+    twitter_bot = TwitterBot(os.environ['TWITTER_API_TOKEN'],os.environ['TWITTER_API_TOKEN_SECRET'],
+        os.environ['TWITTER_API_CONSUMER_KEY'],os.environ['TWITTER_API_CONSUMER_SECRET'])
 
     loop_control = 1
     validator = 0
@@ -177,7 +182,7 @@ def order_tracking_v2(order_tracking_code):
                 else:
                     message = get_status_message('delivered',order_tracking_code,obj)
                 print(message)
-                twitter_bot.send_direct(twitter_settings['target_username'],message)
+                twitter_bot.send_direct(os.environ['TWITTER_DM_TARGET_USER'],message)
                 validator = response
         else:
             print(f'Ainda não foi entregue :( | Horário da Consulta: {str(datetime.datetime.now())[:19]}')
@@ -189,7 +194,7 @@ def order_tracking_v2(order_tracking_code):
                 latest_event_origin = latest_event['unidade']['local'] + ' - ' + latest_event['unidade']['cidade']
 
                 message=f'Nada ainda! :( O objeto {order_tracking_code} ainda não saiu para entrega\nHorário da Consulta: {str(datetime.datetime.now())[:19]}\n{get_last_status(obj)}\n'
-                twitter_bot.send_direct(twitter_settings['target_username'],message)
+                twitter_bot.send_direct(os.environ['TWITTER_DM_TARGET_USER'],message)
             else:               
                 try:
                     next_to_last_event_description = latest_event_description
@@ -212,7 +217,7 @@ def order_tracking_v2(order_tracking_code):
                         print(f'Origem anterior: {next_to_last_event_origin} >> Origem atualizada: {latest_event_origin}\n')
 
                         message=f'Houve uma atualização no status do objeto {order_tracking_code}! :)\nHorário da Consulta: {str(datetime.datetime.now())[:19]}\n{get_last_status(obj)}\n'
-                        twitter_bot.send_direct(twitter_settings['target_username'],message)
+                        twitter_bot.send_direct(os.environ['TWITTER_DM_TARGET_USER'],message)
                 except IndexError:
                     time.sleep(0.01)     
             
