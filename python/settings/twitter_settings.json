@@ -1,9 +1,9 @@
 {
     "api": {
-        "token": "2223109615-HZdypYDKUKs1tlUlOe8qoXSJrd1EIdYmK7rTjXK",
-        "token_secret": "PmPrJkXxVpY8OlBhltTm35lkR0RHDnyxpfqvAdVBCI7p6",
-        "consumer_key": "Xn0qHABiNDcZrHyDpnYYeDpls",
-        "consumer_secret": "Z0TvJV3oBFL1AIZgQRe0UZncz91iuBBu4K6T0TeEOOkaTi7gJI"
+        "token": "",
+        "token_secret": "",
+        "consumer_key": "",
+        "consumer_secret": ""
     },
-    "target_username": "massaoyamada"
+    "target_username": ""
 }
